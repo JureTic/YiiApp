@@ -1,6 +1,7 @@
 <?php
 
 /** @var yii\web\View $this */
+$this->params['breadcrumbs'][] = $this->title;
 
 $this->title = \Yii::t('app','My Job Application');
 ?>

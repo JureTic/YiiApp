@@ -14,6 +14,8 @@ use Yii;
  */
 class Report extends \yii\db\ActiveRecord
 {
+
+
     /**
      * {@inheritdoc}
      */
@@ -47,4 +49,6 @@ class Report extends \yii\db\ActiveRecord
             'percent_done' => 'Percent Done',
         ];
     }
+
+
 }

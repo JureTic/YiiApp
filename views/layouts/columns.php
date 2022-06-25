@@ -45,6 +45,7 @@ AppAsset::register($this);
                 echo Nav::widget([
                     'options' => ['class' => 'navbar-nav'],
                     'items' => [
+                        ['label' => \Yii::t('app','Progress'), 'url' => ['site/index']],
                         ['label' => \Yii::t('app','Your reports'), 'url' => Url::to('?r=report%2Findex')],
                         ['label' => \Yii::t('app','Dummy site'), 'url' => ['#']],
                         ['label' => \Yii::t('app','Dummy site'), 'url' => ['#']],
@@ -61,7 +62,8 @@ AppAsset::register($this);
                 <?= $content ?>
             </div>
             <div class="col-lg-4">
-                <p><?php echo \Yii::t('app',"Temporary Text")?></p>
+                <h3><?php echo \Yii::t('app','Introduction')?></h3>
+                <p><?php echo \Yii::t('app',"The site calculates completion percantage from the combined normalized percantage of all reports assigned to tasks of project 1 in the database. CRUD operations on these reports can be executed by selecting 'Your Reports' item in the menu and than editing the desired report. ")?></p>
             </div>
         </div>
     </div>

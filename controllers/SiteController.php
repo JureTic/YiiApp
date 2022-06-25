@@ -60,11 +60,8 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
-    {
-        $model = new ProgressForm();
-
-        $progress = Yii::$app->db->createCommand('
+    public function getprogress(){
+        $haha = Yii::$app->db->createCommand('
                 SELECT SUM(tom_report.percent_done) / COUNT(tom_report.percent_done) AS progress
                 FROM tom_report
                 LEFT JOIN tom_task
@@ -72,11 +69,22 @@ class SiteController extends Controller
                 WHERE tom_task.project_id = 1')
             ->queryOne();
 
+        return $haha;
+    }
+
+    public function actionIndex()
+    {
+        $model = new ProgressForm();
+
+        $progress = $this->getprogress();
+
         $this->layout = 'columns';
         return $this->render('index',['progress'=>(int)$progress['progress']]);
 
 
     }
+
+
 
     public function actionUser()
     {

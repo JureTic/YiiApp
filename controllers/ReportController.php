@@ -38,6 +38,8 @@ class ReportController extends Controller
      */
     public function actionIndex()
     {
+        $this->layout = 'columns';
+
         $searchModel = new ReportSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
@@ -92,6 +94,7 @@ class ReportController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $this->layout = 'columns';
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
