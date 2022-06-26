@@ -1,5 +1,6 @@
 main > .container {
     padding: 70px 15px 20px;
+
 }
 
 .footer {
@@ -81,4 +82,8 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+body{
+    text-align: center;
+    display: none;
 }

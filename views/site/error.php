@@ -18,10 +18,10 @@ $this->title = $name;
     </div>
 
     <p>
-        <?php echo \Yii::t('app',"The above error occurred while the Web server was processing your request.")?>
+        <?php echo \Yii::t('app/error',"The above error occurred while the Web server was processing your request.")?>
     </p>
     <p>
-        <?php echo \Yii::t('app',"Please contact us if you think this is a server error. Thank you.")?>
+        <?php echo \Yii::t('app/error',"Please contact us if you think this is a server error. Thank you.")?>
     </p>
 
 </div>

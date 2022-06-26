@@ -34,6 +34,7 @@ class Report extends \yii\db\ActiveRecord
             [['id', 'task_id', 'percent_done'], 'integer'],
             [['name'], 'string'],
             [['id'], 'unique'],
+            [['percent_done'], 'number','max' => 100]
         ];
     }
 

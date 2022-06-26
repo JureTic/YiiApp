@@ -11,9 +11,3 @@ $this->title = \Yii::t('app','My Job Application');
     <div class="progress-bar" role="progressbar" style="<?php echo "width:". $progress . "%"?>"  aria-valuenow="<?php echo $progress?>" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
-
-<style>
-    body{
-        text-align: center;
-    }
-</style>

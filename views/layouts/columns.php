@@ -22,6 +22,8 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link rel="stylesheet" href="../../web/css/site.css">
+
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
@@ -63,7 +65,10 @@ AppAsset::register($this);
             </div>
             <div class="col-lg-4">
                 <h3><?php echo \Yii::t('app','Introduction')?></h3>
-                <p><?php echo \Yii::t('app',"The site calculates completion percantage from the combined normalized percantage of all reports assigned to tasks of project 1 in the database. CRUD operations on these reports can be executed by selecting 'Your Reports' item in the menu and than editing the desired report. ")?></p>
+                <p><?php echo \Yii::t('app',"The site calculates completion percantage from the combined normalized percantage of all reports assigned to tasks of project 1 in the database. (calculation located in query in ReportModel.php) CRUD operations on these reports can be executed by selecting 'Your Reports' item in the menu and than editing the desired report. ")?></p>
+                <br>
+                <p><?php echo \Yii::t('app',"Input validation is used when editing report, so that percantage can not be greater than 100. All strings are wrapped in \Yii::t('','') function for trainslation and i18n component is configured in we.php. ")?></p>
+
             </div>
         </div>
     </div>
